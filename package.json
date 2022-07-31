@@ -6,7 +6,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "parcel frontend/src/index.html",
     "server": "node backend/server.js",
-    "dev": "concurrently --kill-others \"npm run build\" \"npm run server\""
+    "dev": "concurrently --kill-others \"npm run build\" \"npm run server\"",
+    "frontend": "parcel build frontend/src/index.html",
+    "dev2": "npm run frontend && node backend/index.js"
   },
   "keywords": [],
   "author": "",
