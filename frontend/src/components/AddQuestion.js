@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 export const AddQuestion = ({ setClicked, setQuestionText, add }) => {
   const handleClick = () => {
@@ -50,10 +49,4 @@ export const AddQuestion = ({ setClicked, setQuestionText, add }) => {
       </div>
     </>
   )
-}
-
-AddQuestion.propTypes = {
-  setClicked: PropTypes.func.isRequired,
-  setQuestionText: PropTypes.func.isRequired,
-  add: PropTypes.func.isRequired
 }
