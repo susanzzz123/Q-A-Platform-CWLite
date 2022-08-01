@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 import axios from 'axios'
 import { Card, Textarea, Label } from 'flowbite-react/lib/esm/components'
 
@@ -87,13 +86,4 @@ export const QuestionDisplay = ({ user, questionText, author, answer, _id, setSe
       </Card>
     </>
   )
-}
-
-QuestionDisplay.propTypes = {
-  user: PropTypes.string.isRequired,
-  questionText: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
-  answer: PropTypes.string.isRequired,
-  _id: PropTypes.string.isRequired,
-  setSelected: PropTypes.func.isRequired
 }
