@@ -4,10 +4,6 @@
     "routes": [
       { "src": "/static/(.*)", "dest": "/dist/$1" },
       { "src": "/(.*)", "dest": "/backend/server.js" }
-    ],
-    "builds": [
-      { "src": "dist/*", "use": "@vercel/static" },
-      { "src": "backend/server.js", "use": "@vercel/node" }
     ]
   }
   
