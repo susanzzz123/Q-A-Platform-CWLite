@@ -21,7 +21,7 @@ export const App = () => {
   useEffect(() => {
     const intervalID = setInterval(async () => {
       try {
-        const { data } = await axios.get('http://localhost:3000/api/questions')
+        const { data } = await axios.get('https://qna-platform-cw-lite.herokuapp.com/api/questions')
         setQuestions(data)
       } catch (e) {
         setMsg('error while fetching questions')
