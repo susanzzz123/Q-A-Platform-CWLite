@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 export const QuestionList = ({ questionText, _id, selected, setSelected }) => {
   const handleClick = () => {
@@ -19,11 +18,4 @@ export const QuestionList = ({ questionText, _id, selected, setSelected }) => {
       </a>
     </>
   )
-}
-
-QuestionList.propTypes = {
-  questionText: PropTypes.string.isRequired,
-  _id: PropTypes.string.isRequired,
-  selected: PropTypes.string.isRequired,
-  setSelected: PropTypes.func.isRequired
 }
