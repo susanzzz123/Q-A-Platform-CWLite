@@ -8,7 +8,7 @@ const account = require('./routes/account')
 const api = require('./routes/api')
 
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.NODE_ENV || 3000
 
 const MONGO_URI = process.env.MONGODB_URI ||
 'mongodb+srv://Susan:Susanzzz123@cluster0.ehvmi.mongodb.net/?retryWrites=true&w=majority'
