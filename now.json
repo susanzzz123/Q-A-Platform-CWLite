@@ -6,8 +6,8 @@
       { "src": "/(.*)", "dest": "/backend/server.js" }
     ],
     "builds": [
-      { "src": "dist/*", "use": "@now/static" },
-      { "src": "backend/server.js", "use": "@now/node" }
+      { "src": "dist/*", "use": "@vercel/static" },
+      { "src": "backend/server.js", "use": "@vercel/node" }
     ]
   }
   
