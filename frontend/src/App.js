@@ -33,7 +33,7 @@ export const App = () => {
   useEffect(() => {
     const getSession = async () => {
       try {
-        const { data } = await axios.get('http://localhost:3000/api/status')
+        const { data } = await axios.get('https://qna-platform-cw-lite.herokuapp.com/api/status')
         setUser(data)
       } catch (e) {
         setMsg('error while fetching logged in user')
@@ -44,7 +44,7 @@ export const App = () => {
 
   const logOut = async () => {
     try {
-      await axios.post('http://localhost:3000/account/logout')
+      await axios.post('https://qna-platform-cw-lite.herokuapp.com/account/logout')
       setUser('')
     } catch (e) {
       window.alert(e.response.data)
@@ -53,7 +53,7 @@ export const App = () => {
 
   const add = async () => {
     try {
-      await axios.post('http://localhost:3000/api/questions/add', { questionText })
+      await axios.post('https://qna-platform-cw-lite.herokuapp.com/api/questions/add', { questionText })
     } catch (e) {
       window.alert(e.response.data)
     }
