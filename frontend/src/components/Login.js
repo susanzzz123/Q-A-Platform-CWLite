@@ -18,7 +18,7 @@ export const Login = () => {
 
   const loginUser = async () => {
     try {
-      const { data } = await axios.post('http://localhost:3000/account/login', { username, password })
+      const { data } = await axios.post('https://qna-platform-cw-lite.herokuapp.com/account/login', { username, password })
       setMsg(data)
       setSuccess(true)
       window.setTimeout(() => timeOut(), 2500)
