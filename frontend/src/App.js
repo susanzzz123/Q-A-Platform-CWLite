@@ -5,6 +5,7 @@ import { QuestionDisplay } from './components/QuestionDisplay'
 import { AddQuestion } from './components/AddQuestion'
 import { QuestionList } from './components/QuestionList'
 import { DefaultDisplay } from './components/DefaultDisplay'
+import { Spinner } from './components/Spinner'
 
 export const App = () => {
   const [questions, setQuestions] = useState([])
@@ -122,6 +123,9 @@ export const App = () => {
         }
         <div className='grid grid-flow-col grid-col-12'>
           <div className='p-2 m-2 col-span-11 max-h-screen overflow-y-auto'>
+            {
+              questions.length === 0 && (<Spinner></Spinner>)
+            }
             {questions.map(question =>
             <QuestionList questionText={question.questionText} _id={question._id} selected={selected} setSelected={setSelected} key={question._id}>
             </QuestionList>
