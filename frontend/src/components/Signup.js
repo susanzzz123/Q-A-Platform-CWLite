@@ -17,7 +17,7 @@ export const Signup = () => {
 
   const createUser = async () => {
     try {
-      await axios.post('http://localhost:3000/account/signup', { username, password })
+      await axios.post('https://qna-platform-cw-lite.herokuapp.com/account/signup', { username, password })
       setMsg('User createion was successful!')
       setSuccess(true)
       window.setTimeout(() => timeOut(), 2500)
