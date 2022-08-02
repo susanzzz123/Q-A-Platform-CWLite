@@ -8,7 +8,7 @@ export const QuestionDisplay = ({ user, questionText, author, answer, _id, setSe
   const submitAnswer = async () => {
     try {
       console.log(newAnswer)
-      const { data } = await axios.post('http://localhost:3000/api/questions/answer', { _id, answer: newAnswer })
+      const { data } = await axios.post('https://qna-platform-cw-lite.herokuapp.com/api/questions/answer', { _id, answer: newAnswer })
       console.log(data)
       setNewAnswer('')
     } catch (e) {
@@ -18,7 +18,7 @@ export const QuestionDisplay = ({ user, questionText, author, answer, _id, setSe
 
   const deletePost = async () => {
     try {
-      const { data } = await axios.delete('http://localhost:3000/api/questions/delete', { data: { _id, author } })
+      const { data } = await axios.delete('https://qna-platform-cw-lite.herokuapp.com/api/questions/delete', { data: { _id, author } })
       setSelected('')
       console.log(data)
     } catch (e) {
