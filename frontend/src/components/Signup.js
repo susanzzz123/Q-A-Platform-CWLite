@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import { Alert } from 'flowbite-react'
 
 export const Signup = () => {
   const [username, setUsername] = useState('')
@@ -31,9 +32,14 @@ export const Signup = () => {
     <>
     {
       success && (
-        <div className='p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800' role='alert'>
-          <span className='font-medium'>{msg}</span> Returning to home page in a few seconds.
-        </div>
+        <Alert className='p-4 mb-4' color='success'>
+            <span className='text-lg'>
+              <span className='font-medium'>
+                {msg}
+              </span>
+              {' '}Returning to home page in a few seconds.
+            </span>
+        </Alert>
       )
     }
     <div className='grid h-screen place-items-center bg-purple-100'>
