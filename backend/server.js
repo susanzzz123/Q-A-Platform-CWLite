@@ -13,6 +13,7 @@ const port = process.env.PORT || 3000
 const MONGO_URI = process.env.MONGODB_URI ||
 'mongodb+srv://Susan:Susanzzz123@cluster0.ehvmi.mongodb.net/?retryWrites=true&w=majority'
 
+//connect to database
 mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
