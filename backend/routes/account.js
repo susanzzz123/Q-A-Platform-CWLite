@@ -18,17 +18,6 @@ router.post('/signup', async (req, res, next) => {
   }
 })
 
-router.post('/update', async (req, res, next) => {
-  try {
-    const { username, password } = req.body
-    await User.updateOne({ username }, { password })
-    req.session.username = username
-    res.send('successfully updated user information')
-  } catch (e) {
-    next(new Error('an error occurred when updating user'))
-  }
-})
-
 router.post('/login', async (req, res, next) => {
   const { username, password } = req.body
   if (req.session.username) {
